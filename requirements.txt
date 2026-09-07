@@ -1,0 +1,39 @@
+﻿# ──────────────────────────────────────────────────────────────────────────────
+# requirements.txt
+# Generative Steganography — Fourier-Ring / Stable Diffusion v1-5
+#
+# Install:
+#   pip install -r requirements.txt
+#
+# For GPU (CUDA 11.8):
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
+#   pip install -r requirements.txt
+#
+# For CPU-only (slow but works):
+#   pip install -r requirements.txt         (torch CPU wheel auto-selected)
+# ──────────────────────────────────────────────────────────────────────────────
+
+# Core deep-learning stack
+torch>=2.1.0
+torchvision>=0.16.0
+
+# Hugging Face diffusion pipeline
+diffusers>=0.27.0
+transformers>=4.38.0
+accelerate>=0.28.0
+
+# Image handling
+Pillow>=9.5.0
+
+# Numerical computing & visualisation
+numpy>=1.24.0
+matplotlib>=3.7.0
+
+# Image quality metrics (SSIM) — optional but recommended
+scikit-image>=0.21.0
+
+# Hugging Face model download helper (needed for gated models)
+huggingface-hub>=0.21.0
+
+# Safety / misc (already pulled in by diffusers, listed for explicitness)
+safetensors>=0.4.0
